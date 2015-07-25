@@ -1,0 +1,239 @@
+/* Color Palette */
+$c_blk: #111111; //     black-ish
+$c_grayMed: #7f7f7f; // accent-grey
+$c1: #e1d8b9; //        sand
+$c2: #cb7d20; //        orange
+$c3: #eda926; //        accent orange
+$c4: #3c6b92; //        main blue
+$c5: #ff0033; //        hot pink
+
+/* Colors, for export */
+.c_blk { color: $c_blk; }
+.c_grayMed { color: $c_grayMed; }
+.c1 { color:$c1; }
+.c2 { color:$c2; }
+.c3 { color:$c3; }
+.c4 { color:$c4; }
+.c5 { color:$c5; }
+
+
+/* Early browser support */
+header, section, article, aside, nav, footer {
+  display: block;
+}
+
+.clear {
+    clear: both;
+    height:1px;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+  font-size:3em; /* 30px/10px; target / context = result */
+  font-weight: bold;
+}
+
+body {
+  color: $c_blk;
+  font-family:'Helvetica', serif;
+  font-size: 62.5%;
+  width: 990px;
+  margin: 0 auto;
+  text-align: left;
+  position: relative; 
+  color: #111111;
+  padding-top: 50px;
+  background-color: #ffffff; 
+  background-image: url("../images/headerDev3.png"), url("../images/headerDev3_rev.png");
+  background-position: center top, 80% bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+h1 {
+  font-size:1.9em;
+  font-weight:bold;
+  font-family:'Federo', serif;
+    text-shadow:1px 1px 1px 999;
+    padding:0 0 0 10px;
+} /* 48px/30px; target / context = result */
+h2 {
+  font-size:1.3em;
+  color:#090;
+  font-family:'Federo', serif;
+} /* 10px/10px; target / context = result */
+h3 {
+  font-size:0.9em;
+  color:#009;
+  font-family:'Federo', serif;
+} /* 10px/10px; target / context = result */
+
+h6, .footerCol1 p, .footerCol2 p {
+  font-size:0.6em;
+  color:#999;
+  font-family:'Federo', serif;
+  text-decoration: none;
+
+} /* smallest */
+
+
+header {
+  padding-bottom:10px;
+}
+
+#contentSection {
+  width: 90%;
+  font-size:0.7em;
+  padding:10px 10px 0 10px;
+}
+
+#tagline{
+  font-size:0.7em;
+  color:#900;
+  font-family:'Federo', serif;
+  text-shadow:1px 1px 1px #666;
+  padding:0 0 0 10px; }
+
+figcaption {font-size:0.7em;font-weight: bold;color:$c3;}
+
+#siteWrapper {
+  width:100%; }
+
+#mainHeader { 
+  width:100%;
+  height:85px; }
+
+section {font-size:0.90em;margin-bottom:15px;} /* 27px/30px = em */
+article {font-size:0.90em;margin-bottom:15px;} /* 27px/30px = em */
+
+.contentFull {width:98%; margin: 0 1% 0 1%; float:left;} // 2 margins
+.contentCol1 {width:48%; margin: 0 1% 0 1%; float:left;}   // 2 margins = 50%
+.contentCol2 {width:48%; margin: 0 1% 0 1%; float:right;}  // 2 margins = 50%
+
+
+
+blockquote span::before { 
+  position: relative;
+  top: 0.2em;
+  font-size: 1.5em;
+  color: #888;
+  content: "“"; // &#8220;
+}
+blockquote span::after { 
+  position: relative;
+  top: 0.2em;
+  font-size: 1.5em;
+  color: #888;
+  content: "”"; // &#8221;
+}
+blockquote {
+  color: #AAA;
+  font-size: 1.0em;
+  line-height: 1.0em;
+  margin: 0 5px 15px 5px;
+}
+
+
+.altTable {
+  width:80%;
+  color:ccc;
+  margin:5px 10% 5px 10%;
+}
+table.altTable tr:nth-child(even)  {
+  background: #bbb;
+}
+table.altTable tr:nth-child(odd)  {
+  background: #ddd;
+}
+
+
+#footerSection {
+  margin:10px 0 10px 0; }
+
+.footerCol1 {
+  width:48%; 
+  margin: 0 1% 0 1%; 
+  float:left; 
+  padding:5px 0 5px 0; }
+
+.postfooter {
+  height: 1000px;
+}
+
+.postFooterContent {
+  font-size:0.6em;
+  position:relative;
+  left: 10px;
+  top: 80px;
+}
+
+@media screen and (max-width: 900px) { 
+  body {
+    padding-top: 80px;
+    width: 105%;
+  }
+  .postFooterContent {
+    top: 40px;
+  }
+}
+
+
+
+/* Application Content */
+.img-responsive {
+  width: 100%;
+  padding: 10% 0 10% 0;
+}
+
+.figure-caption {
+  color: #ccc;
+  text-align: center;
+}
+
+
+/* PLAYGROUND CSS */
+
+.sliderBox {
+  color: $c_blk; 
+  font-size:24px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: $c2;
+  background: linear-gradient(to bottom, #F00 0%, #333 100%);
+  display:inline-block;
+  height:100px;
+  width: 100%;
+  min-width:320px;
+}
+
+
+
+IMG.userProfileImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+
+.userProfile {
+  display: inline-block;
+  position: relative;
+  z-index: -10;
+  top:-30px;
+  border: none;
+  height: 100px;
+  margin:  0;
+  padding: 0;
+  width: 100%;
+  background-color: lighten($c1, 10%);
+  .textContent {
+    font-size:18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding-top: 30px;
+  }
+}
+
