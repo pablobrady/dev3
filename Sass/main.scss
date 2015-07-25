@@ -232,9 +232,15 @@ table.altTable tr:nth-child(odd)  {
     padding-top: 80px;
     width: 105%;
   }
-  .img-responsive {
-    width: 50%;
+
+  .leftPres, .rightPres {
+    padding:10px 0 0 0;
+    width:100%; 
   }
+  .rightImg, .leftImg {
+    width:100%;
+    padding:20px 0 20px 0; }
+
   .postFooterContent {
     top: 40px;
   }
