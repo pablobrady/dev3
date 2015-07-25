@@ -32,6 +32,19 @@ header, section, article, aside, nav, footer {
   padding: 0;
   margin: 0; }
 
+/* Clear-less */
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1;
+  /* IE 6 and 7 */ }
+
 html {
   font-size: 3em;
   /* 30px/10px; target / context = result */
@@ -79,6 +92,12 @@ h6, .footerCol1 p, .footerCol2 p {
   text-decoration: none; }
 
 /* smallest */
+a:link, a:hover, a:visited {
+  color: #cb7d20;
+  text-decoration: none; }
+  a:link:hover, a:hover:hover, a:visited:hover {
+    text-decoration: underline; }
+
 header {
   padding-bottom: 10px; }
 
@@ -88,7 +107,7 @@ header {
   padding: 10px 10px 0 10px; }
 
 #tagline {
-  font-size: 0.7em;
+  font-size: 0.81em;
   color: #900;
   font-family: 'Federo', serif;
   text-shadow: 1px 1px 1px #666;
@@ -180,22 +199,47 @@ table.altTable tr:nth-child(odd) {
   left: 10px;
   top: 80px; }
 
-@media screen and (max-width: 900px) {
-  body {
-    padding-top: 80px;
-    width: 105%; }
+/* Presentation Elements */
+.presentationItem {
+  padding: 40px 0 0 0;
+  width: 100%; }
 
-  .postFooterContent {
-    top: 40px; } }
+.leftPres {
+  float: left;
+  padding: 10px 5% 0 5%;
+  width: 40%; }
+
+.rightImg {
+  float: right;
+  width: 50%; }
+
+.rightPres {
+  float: right;
+  padding: 10px 5% 0 5%;
+  width: 40%; }
+
+.leftImg {
+  float: left;
+  width: 50%; }
+
 /* Application Content */
 .img-responsive {
-  width: 100%;
-  padding: 10% 0 10% 0; }
+  width: 100%; }
 
 .figure-caption {
   color: #ccc;
   text-align: center; }
 
+@media screen and (max-width: 900px) {
+  body {
+    padding-top: 80px;
+    width: 105%; }
+
+  .img-responsive {
+    width: 50%; }
+
+  .postFooterContent {
+    top: 40px; } }
 /* PLAYGROUND CSS */
 .sliderBox {
   color: #111111;

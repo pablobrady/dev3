@@ -29,6 +29,24 @@ header, section, article, aside, nav, footer {
     margin: 0;
 }
 
+
+/* Clear-less */
+.group:before, 
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1; /* IE 6 and 7 */
+}
+
+
+
 html {
   font-size:3em; /* 30px/10px; target / context = result */
   font-weight: bold;
@@ -76,6 +94,13 @@ h6, .footerCol1 p, .footerCol2 p {
 
 } /* smallest */
 
+a:link, a:hover, a:visited {
+  color: $c2;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 header {
   padding-bottom:10px;
@@ -88,7 +113,7 @@ header {
 }
 
 #tagline{
-  font-size:0.7em;
+  font-size:0.81em;
   color:#900;
   font-family:'Federo', serif;
   text-shadow:1px 1px 1px #666;
@@ -167,10 +192,48 @@ table.altTable tr:nth-child(odd)  {
   top: 80px;
 }
 
+
+/* Presentation Elements */
+.presentationItem { 
+  padding:40px 0 0 0;
+  width:100%; 
+}
+
+.leftPres {
+  float:left; 
+  padding:10px 5% 0 5%;
+  width:40%; }
+.rightImg {
+  float:right; 
+  width:50%; }
+
+.rightPres {
+  float:right; 
+  padding:10px 5% 0 5%;
+  width:40%; }
+.leftImg {
+  float:left; 
+  width:50%; }
+
+
+/* Application Content */
+.img-responsive {
+  width: 100%;
+}
+
+.figure-caption {
+  color: #ccc;
+  text-align: center;
+}
+
+
 @media screen and (max-width: 900px) { 
   body {
     padding-top: 80px;
     width: 105%;
+  }
+  .img-responsive {
+    width: 50%;
   }
   .postFooterContent {
     top: 40px;
@@ -178,17 +241,6 @@ table.altTable tr:nth-child(odd)  {
 }
 
 
-
-/* Application Content */
-.img-responsive {
-  width: 100%;
-  padding: 10% 0 10% 0;
-}
-
-.figure-caption {
-  color: #ccc;
-  text-align: center;
-}
 
 
 /* PLAYGROUND CSS */
