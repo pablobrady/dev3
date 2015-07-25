@@ -1,0 +1,67 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Video - Sunglass City</title>
+
+<style>
+body {
+  font: .8em/150% Arial, Helvetica, sans-serif;
+  color: #666;
+  width: 850px;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+
+/* html5 elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/************************************************************************************
+RESPONSIVE VIDEO
+*************************************************************************************/
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video iframe,  
+.video object,  
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/************************************************************************************
+MIN & MAX WIDTH
+*************************************************************************************/
+/* max width container */
+.container {
+  width: 700px;
+  max-width: 90%;
+
+  margin: 0 auto;
+  background: #eee;
+  border: solid 1px #ddd;
+  height: 200px;
+}
+</style>
+</head>
+
+<body>
+
+<h3>Responsive Video - Sunglass City</h3>
+<div class="video">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Wy9iqf7PB1k" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</body>
+</html>
