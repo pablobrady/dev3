@@ -1,5 +1,5 @@
 # dev3
-Dev3 - A hand-coded, responsive portfolio site.
+Dev3 - My hand-coded, responsive portfolio site.
 
 ## Sample Screenshots
 
@@ -45,6 +45,6 @@ Or, running ```grunt dev``` from the command line, will...
 
 
 ## Visit the Live Site
-You can visit my latest portfolio site [here](https://www.pbrady.net).  
+You can visit my latest portfolio site [here](http://www.pbrady.net).  
 Grazie!
 
