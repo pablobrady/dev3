@@ -52,4 +52,18 @@
   // }, function() {
   //   $(this).animate({ color: "#00FF00" }, 300); 
   // });
+
+
+  $('.tabs .tab-links a').on('click', function(e)  {
+    var currentAttrValue = $(this).attr('href');
+ 
+    // Show/Hide Tabbed Content
+    $('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+    // Change/remove current tab to active
+    $(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+    e.preventDefault();
+  });
+
 })

@@ -17,10 +17,10 @@
   color: #eda926; }
 
 .c4 {
-  color: #3c6b92; }
+  color: #17908B; }
 
 .c5 {
-  color: #ff0033; }
+  color: #900; }
 
 /* Early browser support */
 header, section, article, aside, nav, footer {
@@ -45,10 +45,14 @@ header, section, article, aside, nav, footer {
   zoom: 1;
   /* IE 6 and 7 */ }
 
+/* Reset odd reset.css UL margin-left setting */
+ul {
+  margin-left: 0; }
+
 html {
   font-size: 3em;
   /* 30px/10px; target / context = result */
-  font-weight: bold; }
+  font-weight: normal; }
 
 body {
   color: #111111;
@@ -64,6 +68,13 @@ body {
   background-image: url("../images/headerDev3.png"), url("../images/headerDev3_rev.png");
   background-position: center top, 80% bottom;
   background-repeat: no-repeat, no-repeat; }
+
+.italicText {
+  font-size: 1.0em;
+  font-weight: none;
+  font-style: italic;
+  font-family: 'Arial', serif;
+  color: #999; }
 
 h1 {
   font-size: 1.9em;
@@ -85,8 +96,22 @@ h3 {
   font-family: 'Federo', serif; }
 
 /* 10px/10px; target / context = result */
+h4 {
+  font-size: 1.2em;
+  color: #eda926;
+  font-family: 'Federo', serif;
+  padding-bottom: 10px; }
+
+/* 10px/10px; target / context = result */
+h5 {
+  font-size: 0.7em;
+  color: #900;
+  font-family: 'Arial', serif;
+  text-decoration: none; }
+
+/* smallest */
 h6, .footerCol1 p, .footerCol2 p {
-  font-size: 0.6em;
+  font-size: 0.9em;
   color: #999;
   font-family: 'Federo', serif;
   text-decoration: none; }
@@ -100,11 +125,6 @@ a:link, a:hover, a:visited {
 
 header {
   padding-bottom: 10px; }
-
-#contentSection {
-  width: 90%;
-  font-size: 0.7em;
-  padding: 10px 10px 0 10px; }
 
 #tagline {
   font-size: 0.81em;
@@ -202,7 +222,7 @@ table.altTable tr:nth-child(odd) {
 /* Presentation Elements */
 .presentationItem {
   padding: 40px 0 0 0;
-  width: 100%; }
+  width: 90%; }
 
 .leftPres {
   float: left;
@@ -222,6 +242,12 @@ table.altTable tr:nth-child(odd) {
   float: left;
   width: 50%; }
 
+.projSuffixText {
+  font-size: 0.7em; }
+
+.desc ul li {
+  margin-left: 22px; }
+
 /* Application Content */
 .img-responsive {
   width: 100%; }
@@ -230,21 +256,18 @@ table.altTable tr:nth-child(odd) {
   color: #ccc;
   text-align: center; }
 
-@media screen and (max-width: 900px) {
-  body {
-    padding-top: 80px;
-    width: 105%; }
+.newspaper {
+  -webkit-column-count: 2;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 2;
+  /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 20px;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: 20px;
+  /* Firefox */
+  column-gap: 20px; }
 
-  .leftPres, .rightPres {
-    padding: 10px 0 0 0;
-    width: 100%; }
-
-  .rightImg, .leftImg {
-    width: 100%;
-    padding: 20px 0 20px 0; }
-
-  .postFooterContent {
-    top: 40px; } }
 /* PLAYGROUND CSS */
 .sliderBox {
   color: #111111;
@@ -283,5 +306,97 @@ IMG.userProfileImage {
     margin-right: auto;
     width: 40%;
     padding-top: 30px; }
+
+strong, b {
+  font-weight: bold; }
+
+/*----- Tabs -----*/
+.tabs {
+  width: 100%;
+  display: inline-block;
+  font-size: 0.7em;
+  padding-top: 20px; }
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+.tab-links {
+  border-bottom: 1px solid #eee; }
+
+ul.tab-links {
+  margin-left: 10px; }
+
+.tab-links li {
+  margin: 0px 5px;
+  float: left;
+  list-style: none; }
+
+.tab-links a {
+  padding: 9px 15px;
+  display: inline-block;
+  border-radius: 3px 3px 0px 0px;
+  background: #ffe4ae;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4c4c4c;
+  text-decoration: none;
+  transition: all linear 0.15s; }
+
+.tab-links a:hover {
+  background: #c3e5c3;
+  text-decoration: none; }
+
+li.active a, li.active a:hover {
+  background: #d4b06a;
+  color: #4c4c4c; }
+
+/*----- Content of Tabs -----*/
+.tab-content {
+  padding: 15px; }
+
+.tab {
+  display: none; }
+
+.tab.active {
+  display: block; }
+
+@media screen and (max-width: 900px) {
+  body {
+    padding-top: 80px;
+    width: 100%; }
+
+  .leftPres, .rightPres {
+    padding: 10px 0 0 0;
+    width: 100%; }
+
+  .rightImg, .leftImg {
+    width: 100%;
+    padding: 20px 0 20px 0; }
+
+  .postFooterContent {
+    top: 40px; } }
+@media screen and (max-width: 700px) {
+  .newspaper {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1; } }
+@media screen and (max-width: 320px) {
+  body {
+    padding-top: 30px;
+    width: 320px; }
+
+  .leftPres, .rightPres {
+    padding: 10px 10px 0 0;
+    width: 90%; }
+
+  .rightImg, .leftImg {
+    width: 90%;
+    padding: 20px 10px 20px 0; } }
 
 /*# sourceMappingURL=main.css.map */
