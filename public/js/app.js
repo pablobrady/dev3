@@ -26,7 +26,6 @@
       }, 500 );
   });
 
-
   $(".clickMe1").click(function() {
 
       // CLICK_ME_1 - Expand/Shrink
@@ -47,13 +46,6 @@
   });
 
 
-  //   $("#navigationUL li a").hover(function() { 
-  //   $(this).animate({ color: "#FF0000" }, 600); 
-  // }, function() {
-  //   $(this).animate({ color: "#00FF00" }, 300); 
-  // });
-
-
   $('.tabs .tab-links a').on('click', function(e)  {
     var currentAttrValue = $(this).attr('href');
  
@@ -66,4 +58,4 @@
     e.preventDefault();
   });
 
-})
+});
