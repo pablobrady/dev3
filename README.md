@@ -1,6 +1,16 @@
 # dev3
 Dev3 - A hand-coded, responsive portfolio site.
 
+## Sample Screenshots
+
+### On the Desktop...
+![Sample desktop screenshot](https://github.com/pablobrady/dev3/blob/73cfca4024709846c764ba6a728199194640ba86/screenshot-Desktop.jpg)
+
+### On a Mobile Device...
+![Sample mobile screenshot](https://github.com/pablobrady/dev3/blob/73cfca4024709846c764ba6a728199194640ba86/screenshot-Mobile.jpg)
+
+
+
 ## Getting Started
 
 1. Install Grunt-cli with ```npm install -g grunt-cli```.
