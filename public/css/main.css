@@ -315,7 +315,8 @@ strong, b {
   width: 100%;
   display: inline-block;
   font-size: 0.7em;
-  padding-top: 20px; }
+  padding-top: 20px;
+  height: 1500px; }
 
 /*----- Tab Links -----*/
 /* Clearfix */
@@ -344,7 +345,7 @@ ul.tab-links {
   font-weight: 600;
   color: #4c4c4c;
   text-decoration: none;
-  transition: all linear 0.15s; }
+  transition: all linear 0.4s; }
 
 .tab-links a:hover {
   background: #c3e5c3;
@@ -385,7 +386,10 @@ li.active a, li.active a:hover {
     /* Chrome, Safari, Opera */
     -moz-column-count: 1;
     /* Firefox */
-    column-count: 1; } }
+    column-count: 1; }
+
+  .tabs {
+    height: 3000px; } }
 @media screen and (max-width: 320px) {
   body {
     padding-top: 30px;
@@ -397,6 +401,9 @@ li.active a, li.active a:hover {
 
   .rightImg, .leftImg {
     width: 90%;
-    padding: 20px 10px 20px 0; } }
+    padding: 20px 10px 20px 0; }
+
+  .tabs {
+    height: 5000px; } }
 
 /*# sourceMappingURL=main.css.map */
