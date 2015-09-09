@@ -2,14 +2,19 @@
 $c_wht: #ffffff; //     pure white
 $c_blk: #111111; //     black-ish
 $c_grayMed: #7f7f7f; // accent-grey
-$c_grayDark: #666666; // dark-grey
+
 $c1: #e1d8b9; //        sand
 $c2: #cb7d20; //        orange
 $c3: #eda926; //        accent orange
 $c4: #17908B; //        main blue/green
 
-$c_deepRed:   #900;  // deep red
-$c_deepGreen: #090;  // deep green
+$c_darkSand: #d4b06a;// dark sand
+$c_grayDark: #666666; // dark-grey
+
+$c_deepRed:   #900;
+$c_deepGreen: #090;
+
+$c_lightGreen: #c3e5c3;
 
 /* Colors, for export */
 .c_wht { color: $c_wht; }
@@ -27,9 +32,13 @@ header, section, article, aside, nav, footer {
   display: block;
 }
 
+strong, b {
+  font-weight: 600;
+}
+
 .clear {
     clear: both;
-    height:1px;
+    height: 1px;
     padding: 0;
     margin: 0;
 }
@@ -58,13 +67,13 @@ ul {
 
 
 html {
-  font-size:3em; // 30px/10px; target / context = result
+  font-size: 3em; // 30px/10px; target / context = result
   font-weight: normal;
 }
 
 body {
   color: $c_blk;
-  font-family:'Helvetica', serif;
+  font-family: 'Helvetica', serif;
   font-size: 62.5%;
   width: 990px;
   margin: 0 auto;
@@ -75,10 +84,11 @@ body {
   background-image: url("../images/headerDev3.png"), url("../images/headerDev3_rev.png");
   background-position: center top, 80% bottom;
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .italicText {
-  font-size:1.0em;
+  font-size: 1.0em;
   font-weight: normal;
   font-style: italic;
   font-family: 'Arial', serif;
@@ -86,11 +96,11 @@ body {
 }
 
 h1 {
-  font-size:1.9em;
+  font-size: 1.9em;
   font-weight: bold;
   font-family: 'Federo', serif;
-    text-shadow:1px 1px 1px #999;
-    padding:0 0 0 10px;
+  text-shadow: 1px 1px 1px #999;
+  padding: 0 0 0 10px;
 } /* 48px/30px; target / context = result */
 h2 {
   font-size: 1.3em;
@@ -107,7 +117,7 @@ h4 {
   font-size: 1.2em;
   color: $c3;
   font-family: 'Federo', serif;
-  padding-bottom:10px;
+  padding-bottom: 10px;
 } /* 10px/10px; target / context = result */
 
 h5 {
@@ -133,45 +143,46 @@ a:link, a:hover, a:visited {
 }
 
 .tagline{
-  font-size:0.81em;
-  color:$c_deepRed;
-  font-family:'Federo', serif;
-  text-shadow:1px 1px 1px $c_grayDark;
-  padding:0 0 0 10px; 
+  font-size: 0.81em;
+  color: $c_deepRed;
+  font-family: 'Federo', serif;
+  text-shadow: 1px 1px 1px $c_grayDark;
+  padding: 0 0 0 10px; 
 }
 
 .figure-caption {
-  font-size:0.7em; 
+  font-size: 0.7em; 
   font-weight: bold; 
-  color:$c_grayMed;
+  color: $c_grayMed;
   text-align: center;
 }
 
 .siteWrapper {
-  width:100%; 
+  width: 100%; 
 }
 
 .mainHeader { 
-  width:100%;
-  height:85px;
-  padding-bottom:10px;
+  width: 100%;
+  height: 85px;
+  padding-bottom: 10px;
 }
 
-section {font-size:0.90em;margin-bottom:15px;} /* 27px/30px = em */
-article {font-size:0.90em;margin-bottom:15px;} /* 27px/30px = em */
+section {font-size: 0.90em; margin-bottom: 15px;} /* 27px/30px = em */
+article {font-size: 0.90em; margin-bottom: 15px;} /* 27px/30px = em */
 
-.contentFull {width:98%; margin: 0 1% 0 1%; float:left;}   // 2 margins
-.contentCol1 {width:48%; margin: 0 1% 0 1%; float:left;}   // 2 margins = 50%
-.contentCol2 {width:48%; margin: 0 1% 0 1%; float:right;}  // 2 margins = 50%
+.contentFull {width: 98%; margin: 0 1% 0 1%; float: left;}   // 2 margins
+.contentCol1 {width: 48%; margin: 0 1% 0 1%; float: left;}   // 2 margins = 50%
+.contentCol2 {width: 48%; margin: 0 1% 0 1%; float: right;}  // 2 margins = 50%
 
 
 .footerSection {
-  margin:10px 0 10px 0; }
+  margin:10px 0 10px 0; 
+}
 
 .footerCol1 {
-  width:48%; 
+  width: 48%; 
   margin: 0 1% 0 1%; 
-  float:left; 
+  float: left; 
 }
 
 .postfooter {
@@ -179,8 +190,8 @@ article {font-size:0.90em;margin-bottom:15px;} /* 27px/30px = em */
 }
 
 .postFooterContent {
-  font-size:0.6em;
-  position:relative;
+  font-size: 0.6em;
+  position: relative;
   left: 10px;
   top: 80px;
 }
@@ -188,30 +199,30 @@ article {font-size:0.90em;margin-bottom:15px;} /* 27px/30px = em */
 
 /* Presentation Elements */
 .presentationItem { 
-  margin-top:40px;
-  width:90%;
-  padding:15px;
+  margin-top: 40px;
+  width: 90%;
+  padding: 15px;
 }
 
 .leftPres {
-  float:left; 
-  margin:10px 5% 0 5%;
-  width:40%; 
+  float: left; 
+  margin: 10px 5% 0 5%;
+  width: 40%; 
 }
 
 .rightImg {
-  float:right; 
-  width:50%;
+  float: right; 
+  width: 50%;
 }
 
 .rightPres {
-  float:right; 
-  width:40%;
+  float: right; 
+  width: 40%;
 }
 
 .leftImg {
-  float:left; 
-  width:50%;
+  float: left; 
+  width: 50%;
 }
 
 .projSuffixText {
@@ -242,19 +253,19 @@ article {font-size:0.90em;margin-bottom:15px;} /* 27px/30px = em */
 
 /*----- Tabs -----*/
 .tabs {
-  width:100%;
-  display:inline-block;
-  font-size:0.7em;
-  padding-top:20px;
+  width: 100%;
+  display: inline-block;
+  font-size: 0.7em;
+  padding-top: 20px;
   height: 1500px; // Manual Content Height:  Prevents footer layout issues with content height changes on various tabs.
 }
 
 /*----- Tab Links -----*/
 /* Clearfix */
 .tab-links:after {
-  display:block;
-  clear:both;
-  content:'';
+  display: block;
+  clear: both;
+  content: '';
 }
 
 .tab-links {
@@ -266,40 +277,40 @@ ul.tab-links {
 }
 
 .tab-links li {
-  margin:0px 5px;
-  float:left;
-  list-style:none;
+  margin:0 5px;
+  float: left;
+  list-style: none;
 }
 
 .tab-links a {
-  padding:9px 15px;
-  display:inline-block;
-  border-radius:3px 3px 0px 0px;
-  background:#ffe4ae;
-  font-size:16px;
-  font-weight:600;
-  color:#4c4c4c;
-  text-decoration:none;
-  transition:all linear 0.4s;
+  padding: 9px 15px;
+  display: inline-block;
+  border-radius: 3px 3px 0 0;
+  background: #ffe4ae;
+  font-size: 16px;
+  font-weight: 600;
+  color: $c_grayDark;
+  text-decoration: none;
+  transition: all linear 0.4s;
 }
 
 .tab-links a:hover {
-  background:#c3e5c3;
-  text-decoration:none;
+  background: $c_lightGreen;
+  text-decoration: none;
 }
 
 li.active a, li.active a:hover {
-  background:#d4b06a;
-  color:#4c4c4c;
+  background: $c_darkSand;
+  color: $c_grayDark;
 }
 
 /*----- Content of Tabs -----*/
 .tab {
-  display:none;
+  display: none;
 }
 
-.tab.active {
-  display:block;
+.active {
+  display: block;
 }
 
 
@@ -311,12 +322,12 @@ li.active a, li.active a:hover {
   }
 
   .leftPres, .rightPres {
-    padding:10px 0 0 0;
-    width:100%; 
+    padding: 10px 0 0 0;
+    width: 100%; 
   }
   .rightImg, .leftImg {
-    width:100%;
-    padding:20px 0 20px 0; 
+    padding: 20px 0 20px 0;
+    width: 100%;
   }
   .postFooterContent {
     top: 40px;
@@ -328,6 +339,7 @@ li.active a, li.active a:hover {
     -webkit-column-count: 1; /* Chrome, Safari, Opera */
     -moz-column-count: 1; /* Firefox */
     column-count: 1;
+    -ms-column-count: 1; /* IE */
   }
   .tabs {
     height: 3000px;
@@ -341,12 +353,12 @@ li.active a, li.active a:hover {
     width: 320px;
   }
   .leftPres, .rightPres {
-    padding:10px 10px 0 0;
-    width:90%; 
+    padding: 10px 10px 0 0;
+    width: 90%; 
   }
   .rightImg, .leftImg {
-    padding:20px 10px 20px 0; 
-    width:90%;
+    padding: 20px 10px 20px 0; 
+    width: 90%;
   }
   .tabs {
     height: 5000px;

@@ -70,7 +70,8 @@ body {
   background-color: #ffffff;
   background-image: url("../images/headerDev3.png"), url("../images/headerDev3_rev.png");
   background-position: center top, 80% bottom;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  box-sizing: border-box; }
 
 .italicText {
   font-size: 1.0em;
@@ -285,7 +286,7 @@ li.active a, li.active a:hover {
 .tab {
   display: none; }
 
-.tab.active {
+.active {
   display: block; }
 
 @media screen and (max-width: 900px) {
@@ -309,7 +310,9 @@ li.active a, li.active a:hover {
     /* Chrome, Safari, Opera */
     -moz-column-count: 1;
     /* Firefox */
-    column-count: 1; }
+    column-count: 1;
+    -ms-column-count: 1;
+    /* IE */ }
 
   .tabs {
     height: 3000px; } }
