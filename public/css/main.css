@@ -28,6 +28,9 @@
 header, section, article, aside, nav, footer {
   display: block; }
 
+strong, b {
+  font-weight: 600; }
+
 .clear {
   clear: both;
   height: 1px;
@@ -255,18 +258,18 @@ ul.tab-links {
   margin-left: 10px; }
 
 .tab-links li {
-  margin: 0px 5px;
+  margin: 0 5px;
   float: left;
   list-style: none; }
 
 .tab-links a {
   padding: 9px 15px;
   display: inline-block;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0 0;
   background: #ffe4ae;
   font-size: 16px;
   font-weight: 600;
-  color: #4c4c4c;
+  color: #666666;
   text-decoration: none;
   transition: all linear 0.4s; }
 
@@ -276,7 +279,7 @@ ul.tab-links {
 
 li.active a, li.active a:hover {
   background: #d4b06a;
-  color: #4c4c4c; }
+  color: #666666; }
 
 /*----- Content of Tabs -----*/
 .tab {
@@ -295,8 +298,8 @@ li.active a, li.active a:hover {
     width: 100%; }
 
   .rightImg, .leftImg {
-    width: 100%;
-    padding: 20px 0 20px 0; }
+    padding: 20px 0 20px 0;
+    width: 100%; }
 
   .postFooterContent {
     top: 40px; } }
