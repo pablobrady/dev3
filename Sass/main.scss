@@ -16,6 +16,10 @@ $c_deepGreen: #090;
 
 $c_lightGreen: #c3e5c3;
 
+$c_tabBg: #ffcc67;
+$c_tabBgSelected:  #f2a101;
+
+
 /* Colors, for export */
 .c_wht { color: $c_wht; }
 .c_blk { color: $c_blk; }
@@ -273,7 +277,7 @@ article {font-size: 0.90em; margin-bottom: 15px;} /* 27px/30px = em */
 }
 
 ul.tab-links {
-  margin-left: 10px;
+  margin-left: 14px;
 }
 
 .tab-links li {
@@ -285,8 +289,8 @@ ul.tab-links {
 .tab-links a {
   padding: 9px 15px;
   display: inline-block;
-  border-radius: 3px 3px 0 0;
-  background: #ffe4ae;
+  border-radius: 12px 12px 0 0;
+  background: $c_tabBg;
   font-size: 16px;
   font-weight: 600;
   color: $c_grayDark;
@@ -300,7 +304,7 @@ ul.tab-links {
 }
 
 li.active a, li.active a:hover {
-  background: $c_darkSand;
+  background: $c_tabBgSelected;
   color: $c_grayDark;
 }
 

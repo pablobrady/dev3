@@ -256,7 +256,7 @@ article {
   border-bottom: 1px solid #eee; }
 
 ul.tab-links {
-  margin-left: 10px; }
+  margin-left: 14px; }
 
 .tab-links li {
   margin: 0 5px;
@@ -266,8 +266,8 @@ ul.tab-links {
 .tab-links a {
   padding: 9px 15px;
   display: inline-block;
-  border-radius: 3px 3px 0 0;
-  background: #ffe4ae;
+  border-radius: 12px 12px 0 0;
+  background: #ffcc67;
   font-size: 16px;
   font-weight: 600;
   color: #666666;
@@ -279,7 +279,7 @@ ul.tab-links {
   text-decoration: none; }
 
 li.active a, li.active a:hover {
-  background: #d4b06a;
+  background: #f2a101;
   color: #666666; }
 
 /*----- Content of Tabs -----*/
