@@ -27,15 +27,16 @@
   <header id="mainHeader" class="mainHeader">
     <hgroup>
       <h1>PBrady.net</h1>
-      <h2 class="tagline">Developer - Portfolio Site</h2>
+      <h2 class="tagline">Paul Brady's Portfolio Site</h2>
+      <!-- a href="mailto:pablo.brady@gmail.com" class="emailText" title="Email Paul Brady">pablo.brady@gmail.com</a -->
     </hgroup>
   </header>
 
   <div class="tabs">
     <ul class="tab-links">
       <li class="active"><a href="#tab1">Projects</a></li>
-      <li><a href="#tab2">Paul's Bio</a></li>
-      <li><a href="#tab3">Paul's Resume</a></li>
+      <li><a href="#tab2">Paul&#39;s Bio</a></li>
+      <li><a href="#tab3">Paul&#39;s Resume</a></li>
     </ul>
 
     <section class="contentFull tab-content">
@@ -43,14 +44,14 @@
         <br><br>
         <h1>Professional Project Samples</h1>
         <div class="profPresentationItem group">
-        <ul style="list-style-type: none; display: flex;">
-          <li><img src="images/prof/astrocenter_thumb.jpg"><p>Astrocenter.com</p><div>Pixel Perfect HTML/CSS</div></li>
-          <li><img src="images/prof/LoveScore_thumb.jpg"><p>Love Score (report)</p><div>HTML/CSS/.NET</div></li>
-          <li><img src="images/prof/YNTarot-thumb.jpg"><p>Yes No Tarot app</p><div>Objective-C</div></li>
-          <li><img src="images/prof/iPad-Compat-2Signs_thumb.jpg"><p>iPad Horoscope app</p><div>Objective-C</div></li>
-          <li><img src="images/prof/NatalChart_thumb.jpg"><p>Astrological Chart</p><div>.NET/JS/.NET/HTML/CSS</div></li>
-          <li><img src="images/prof/Matchcom_thumb.jpg"><p>Matchmaker app</p><div>AS3/JS/.NET/Match.com API</div></li>
-        </ul></div><br><br>
+          <ul class="flex-container">
+            <li class="flex-item"><img src="images/prof/astrocenter_thumb.jpg"><p>Astrocenter.com</p><div>Pixel Perfect HTML/CSS</div></li>
+            <li class="flex-item"><img src="images/prof/LoveScore_thumb.jpg"><p>Love Score (report)</p><div>HTML/CSS/.NET</div></li>
+            <li class="flex-item"><img src="images/prof/YNTarot-thumb.jpg"><p>Yes No Tarot app</p><div>Objective-C</div></li>
+            <li class="flex-item"><img src="images/prof/iPad-Compat-2Signs_thumb.jpg"><p>iPad Horoscope app</p><div>Objective-C</div></li>
+            <li class="flex-item"><img src="images/prof/NatalChart_thumb.jpg"><p>Natal Chart</p><div>.NET/JS/.NET/HTML/CSS</div></li>
+            <li class="flex-item"><img src="images/prof/Matchcom_thumb.jpg"><p>Matchmaker app</p><div>AS3/JS/.NET/Match.com API</div></li>
+          </ul></div><br><br>
 
         <hr class="hrLine">
 
@@ -61,9 +62,9 @@
               <div class="desc">
                   <h6>Combines Google Map Routes and Yelp 5-star sites.</h6>
                   <ul>
-                  <li>Helped create, research and develop this popular travel app</li>
-                  <li>Developed a Google Map API routes algorithm and a Yelp filtering algorithm</li>
-                  <li>Created a responsive Bootstrap app front-end with a separate landing page</li>
+                    <li>Helped create, research and develop this popular travel app</li>
+                    <li>Developed a Google Map API routes algorithm and a Yelp filtering algorithm</li>
+                    <li>Created a responsive Bootstrap app front-end with a separate landing page</li>
                   </ul><br>
 
                   <div class="projSuffixText">
@@ -74,13 +75,13 @@
                   </div>
 
                   <br />
-                  <p><a target=_roadTripAdvisor href="http://roadtrip-advisor.herokuapp.com"><i class="fa fa-car"></i> Launch "Road Trip Advisor" demo</a></p>
-                  <p><!-- a target=_github href="https://github.com/spacemanatee/spacemanatee"><i class="glyphicon glyphicon-wrench"></i>&nbsp;&nbsp;"Road Trip Advisor" on GitHub</a --></p>
+                  <p><a target="_roadTripAdvisor" href="http://roadtrip-advisor.herokuapp.com"><i class="fa fa-car"></i> Launch "Road Trip Advisor" demo</a></p>
+                  <p><!-- a target="_github" href="https://github.com/spacemanatee/spacemanatee"><i class="glyphicon glyphicon-wrench"></i>&nbsp;&nbsp;"Road Trip Advisor" on GitHub</a --></p>
               </div>
           </div>
           <div class="rightImg">
               <img class="img-responsive" src="images/figure-RoadTripAdvisor.png" alt="" />
-              <figcaption class="figure-caption">(Screenshot:  Road Trip Advisor)</figcaption>
+              <div class="figure-caption">(Screenshot:  Road Trip Advisor)</div>
           </div>
         </div><!--//presentationItem-->
 
@@ -97,20 +98,56 @@
 
                   <div class="projSuffixText">
                     <b>My Tech:</b><br>
-                    React, Twitter Bootstrap, JavaScript</b><br><br>
+                    <b>React</b>, <b>Twitter Bootstrap</b>, <b>JavaScript</b><br><br>
                     <b>Biggest Challenge:</b><br>
                     Learning React quickly<br><br><br>
                   </div>
-                  <p><a target=_chime href="http://chimenotify.herokuapp.com"><i class="fa fa-bell"></i> Launch "Chime" demo</a></p>
-                  <p><!-- a target=_github href="https://github.com/TallestTree/Chime"><i class="glyphicon glyphicon-wrench"></i>&nbsp;&nbsp;"Chime" on GitHub</a --></p>
+                  <p><a target="_chime" href="http://chimenotify.herokuapp.com"><i class="fa fa-bell"></i> Launch "Chime" demo</a></p>
+                  <p><!-- a target="_github" href="https://github.com/TallestTree/Chime"><i class="glyphicon glyphicon-wrench"></i>&nbsp;&nbsp;"Chime" on GitHub</a --></p>
               </div>
           </div>
           <figure class="leftImg">
               <img class="img-responsive" src="images/figure-Chime.png" alt="" />
-              <figcaption class="figure-caption">(Screenshot: "Chime" desktop admin &amp; "Chime" tablet app)</figcaption>
+              <div class="figure-caption">(Screenshot: "Chime" desktop admin &amp; "Chime" tablet app)</div>
           </figure>
         </div><!--//presentationItem-->
         <br><br><br>
+
+        <div class="presentationItem group">
+          <div class="leftPres">
+              <h2 class="title">Tokki</h2>
+              <div class="desc">
+                  <h6>Company directory app that sends text messages to phone when guests arrive</h6>
+                  <ul>
+                      <li>Inherited existing codebase, added additional features to reinforce main lecture points.</li>
+                      <li>Coded a Socket.io communication link between the student’s browsers &amp; the teacher’s browser.</li>
+                      <li>Enforced coding standards to maintain code quality.</li>
+                  </ul><br>
+                  <div class="projSuffixText">
+                    <b>My Tech:</b><br>
+                    JavaScript, Socket.IO, Scrum Master, HTML/CSS, Firebase<br><br>
+                    <b>Biggest Challenge:</b><br>
+                    Quickly learning Socket.IO for creating <nobr>two-way</nobr> audience interactions.<br><br><br>
+                  </div>
+
+                  <p><a target="_Tokki" href="http://tokki.herokuapp.com"><i class="fa fa-university"></i> Launch "Tokki" demo</a></p>
+                  <p><!-- a target="_github" href="https://github.com/spacemanatee/Tokki"><i class="glyphicon glyphicon-wrench"></i>&nbsp;&nbsp;"Tokki" on GitHub</a --></p>
+              </div>
+          </div>
+          <figure class="rightImg">
+              <img class="img-responsive" src="images/figure-Tokki.png" alt="" />
+              <div class="figure-caption">(Screenshot:  Tokki lecture/quiz tool)</div>
+          </figure>
+        </div><!--//presentationItem-->
+
+        <footer>
+          <hr class="hrLine">
+          <div class="postFooterContent">
+            <p><a href="#mainHeader">Return to Top</a></p>
+            <p>Email Paul at:  <a href="mailto:pablo.brady@gmail.com" title="Email Paul">pablo.brady@gmail.com</a></p>
+            <p>Copyright &copy; 2015 Paul Brady</p>
+          </div>
+        </footer>
 
 
       </div><!-- tab1 -->
@@ -118,55 +155,69 @@
       <div id="tab2" class="tab contentFull">
         <div class="presentationItem group newspaper">
 <br>
-Software is such a powerful medium, you can create almost anything.  I've been coding since I was a teenager, and software has always held a fascination for me.
+Software is such a powerful medium, you can create almost anything.  I&#39;ve been coding since I was a teenager, and software has always held a fascination for me.
 <br><br><br>
 
 <h4>What have I created?</h4>
 
-I have created the front-end of several high-traffic websites in the US, Canadian, and Australian markets.  As a web developer, I know I need to be on top of issues like <b>load times</b>, <b>browser compatibility</b>, <b>SEO</b> and <b>UI/UX</b>.  So, I'm constantly experimenting with new tools &amp; methods.<br><br>
+I have created the front-end of several high-traffic websites in the US, Canadian, and Australian markets.  As a web developer, I know I need to be on top of issues like <b>load times</b>, <b>browser compatibility</b>, <b>SEO</b> and <b>UI/UX</b>.  So, I&#39;m constantly experimenting with new tools &amp; methods.<br><br>
 
 In the past I created several iPhone and iPad apps (in <b>Objective-C</b>).  One app even topped out at #4 in the Free section of the App Store (albeit briefly).  To grow the app user base, I created features like innovative page transitions and rich content sharing.<br><br>
 
-I also localized 26 children's educational software titles for "The Learning Company".  Many of these products were written by different teams/software houses.  As a <b>localization engineer</b>, I needed to gain intimate product details very quickly and precisely.<br><br><br>
+I also localized 26 children&#39;s educational software titles for "The Learning Company".  Many of these products were written by different teams/software houses.  As a <b>localization engineer</b>, I needed to gain intimate product details very quickly and precisely.<br><br><br>
 
-<h4>What I'm Good At</h4>
+<h4>What I&#39;m Good At</h4>
 
-I've always considered myself a front-end person at heart (even when writing iOS apps).  Well designed software is a gift, for the users, and other developers.
+I&#39;ve always considered myself a front-end person at heart (even when writing iOS apps).  Well designed software is a gift, for the users, and other developers.
 
-I'm good at creative problem-solving.  I like brainstorming software ideas and then following them through to completion.  And I love the excitement and confidence that well tested software brings.<br><br><br>
+I&#39;m good at creative problem-solving.  I like brainstorming software ideas and then following them through to completion.  And I love the excitement and confidence that well tested software brings.<br><br><br>
 
 These days I’m most at home with <b>JavaScript</b>, <b>jQuery</b>, <b>Twitter Bootstrap</b>, <b>NodeJS/Express</b>, and their brethren.  And I use whatever tool is available to make my work easier/faster/more reliable (<b>Sass</b>, <b>Grunt</b>, <b>JSLint</b>, <b>Mocha/Chai</b>, etc.).<br><br><br>
 
 
 <h4>The Future</h4>
 
-I imagine myself working on the <b>front-end and/or full-stack</b>.  I'm looking for a place that I can make a creative contribution, using my existing skills and learning new ones.<br><br>
+I imagine myself working on the <b>front-end and/or full-stack</b>.  I&#39;m looking for a place that I can make a creative contribution, using my existing skills and learning new ones.<br><br>
 
-To quote my old boss, <b>"Let's do this!"</b>.
+To quote my old boss, <b>"Let&#39;s do this!"</b>.
 <br><br>
 
 
         </div><!--//presentationItem-->
+
+        <footer>
+          <hr class="hrLine">
+          <div class="postFooterContent">
+            <p><a href="#mainHeader">Return to Top</a></p>
+            <p>Email Paul at:  <a href="mailto:pablo.brady@gmail.com" title="Email Paul">pablo.brady@gmail.com</a></p>
+            <p>Copyright &copy; 2015 Paul Brady</p>
+          </div>
+        </footer>
+
       </div>
 
       <div id="tab3" class="tab contentFull">
         <br>
         <iframe src=https://docs.google.com/viewer?url=http://www.pbrady.net/Resume-PaulBrady.pdf?usp=sharing&embedded=true width="100%" height="1080px"></iframe>
+
+
+        <footer>
+          <hr class="hrLine">
+          <div class="postFooterContent">
+            <p><a href="#mainHeader">Return to Top</a></p>
+            <p>Email Paul at:  <a href="mailto:pablo.brady@gmail.com" title="Email Paul">pablo.brady@gmail.com</a></p>
+            <p>Copyright &copy; 2015 Paul Brady</p>
+          </div>
+        </footer>
+
       </div><!-- tab3 -->
 
     </div>
-  
-    <footer class="footerSection"></footer>
-    <section class="postfooter">
-      <div class="postFooterContent">
-        <p><a href="#mainHeader">Return to Top</a></p>
-        <p>Email:  <a href="mailto:no_email@gmail.com" title="Email Paul">pablo.brady@gmail.com</a></p>
-        <p>Copyright &copy; 2015 Paul Brady</p>
-      </div>
-    </section>
+
+
   </section><!-- siteWrapper -->
 
-<script>
+<script async>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
