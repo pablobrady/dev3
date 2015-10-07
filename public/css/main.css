@@ -127,6 +127,11 @@ a:link, a:hover, a:visited {
   a:link:hover, a:hover:hover, a:visited:hover {
     text-decoration: underline; }
 
+.hrLine {
+  width: 60%;
+  margin: auto auto;
+  padding-bottom: 30px; }
+
 .tagline {
   font-size: 0.81em;
   color: #900;
@@ -192,9 +197,22 @@ article {
 
 /* Presentation Elements */
 .profPresentationItem {
-  margin: 15px 15px 0 15px;
-  width: 90%;
+  margin: 15px 0 0 15px;
+  width: -15px;
   overflow: auto; }
+  .profPresentationItem p {
+    color: #090;
+    font-family: 'Arial', serif;
+    font-size: 1.2em;
+    padding: 0; }
+  .profPresentationItem div {
+    color: #111111;
+    font-family: 'Arial', serif;
+    font-size: 0.7em; }
+  .profPresentationItem img {
+    width: 200px;
+    border: solid 2px #000;
+    margin: 0 5px 0 0; }
 
 /* Presentation Elements */
 .presentationItem {

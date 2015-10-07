@@ -146,6 +146,12 @@ a:link, a:hover, a:visited {
   }
 }
 
+.hrLine {
+  width:60%;
+  margin:auto auto;
+  padding-bottom:30px;
+}
+
 .tagline{
   font-size: 0.81em;
   color: $c_deepRed;
@@ -202,9 +208,13 @@ article {font-size: 0.90em; margin-bottom: 15px;} /* 27px/30px = em */
 
 /* Presentation Elements */
 .profPresentationItem { 
-  margin: 15px 15px 0 15px;
-  width: 90%;
+  margin: 15px 0 0 15px;
+  width: -15px;
   overflow:auto;
+
+  p { color: $c_deepGreen; font-family: 'Arial', serif; font-size: 1.2em; padding:0; }
+  div { color: $c_blk; font-family: 'Arial', serif; font-size: 0.7em;}
+  img { width: 200px; border: solid 2px #000; margin:0 5px 0 0;}
 }
 
 /* Presentation Elements */
