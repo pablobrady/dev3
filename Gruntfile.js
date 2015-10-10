@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      all: ['Gruntfile.js', 'src/*.js']
+      all: ['Gruntfile.js', 'src/js/*.js']
     },
 
     sass: {
@@ -21,8 +21,8 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src:  'src/<%= pkg.name %>.js',
-        dest: 'src/<%= pkg.name %>.min.js'
+        src:  'src/js/<%= pkg.name %>.js',
+        dest: 'src/js-uglify/<%= pkg.name %>.min.js'
       }
     },
 
@@ -38,10 +38,29 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['src/<%= pkg.name %>.min.js'],
+        src: ['src/js-uglify/<%= pkg.name %>.min.js'],
         dest: 'public/js/<%= pkg.name %>_all.min.js',
       },
     },
+
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'public/index.html': 'src/index.html',
+          // 'destination2': 'source2'
+        }
+      },
+      // dev: {                                       // Another target
+      //   files: {
+      //     'dist/index.html': 'src/index.html',
+      //     'dist/contact.html': 'src/contact.html'
+      //   }
+      // }
+    }
 
   });
 
@@ -50,7 +69,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-  grunt.registerTask('default',['jshint','uglify','concat','sass']);
-  grunt.registerTask('dev',['jshint','uglify','concat','sass']);
+  grunt.registerTask('default',['jshint','uglify','concat','htmlmin','sass']);
+  grunt.registerTask('dev',['jshint','uglify','concat','htmlmin','watch']);
 };

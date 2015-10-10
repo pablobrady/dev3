@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PBrady.net</title>
+<meta name="copyright" content="Copyright 2015, Paul Brady" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Older browser Support -->
+<!--[if lt IE 9]>
+  <script src="js/html5shim.js"></script>
+<![endif]-->
+
+<link href='http://fonts.googleapis.com/css?family=Federo' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<section id="siteWrapper">
+
+  <header id="mainHeader">
+    <hgroup>
+      <h1>PBrady.net</h1>
+      <h2 id="tagline">Developer - Portfolio Site</h2>
+    </hgroup>
+  </header>
+
+  <section id="contentSection">
+    <section class="contentFull">
+<!-- BUTTON PLAYGROUND -->
+<style>
+.squareButton {
+  height:100px;
+  width:100px;
+  padding:10px;
+  margin:10px;
+  float:left;
+  background: #F00 url('images/ernie_bert.jpg') repeat;
+  background-position: -50px -50px;
+  position:relative;
+}
+.squareButton.img1 {
+  background: #F00 url('images/pbrady_profile.jpeg') no-repeat 20px 20px;
+}
+.selected {
+  color: white;
+  background-color:black;
+}
+.sqButton1 {
+  
+}
+.sqButton2 {
+  background-color:#0F0; 
+}
+.sqButton3 {
+  background-color:#00F; 
+}
+</style>
+      <span id="sb1" class="squareButton sqButton1">
+        PERSONAL BIO
+      </span>
+      <span id="sb2" class="squareButton sqButton2">
+        RESUME
+      </span>
+      <span id="sb3" class="squareButton sqButton3">
+        SOCIAL LINKS
+      </span>
+
+<script>
+$(document).ready(function(){
+  $('.squareButton')
+    .mouseover(function() {
+      $(this).animate({left:'250px'});
+      // $(this).stop().animate({backgroundColor:"#FF0000"}, {duration:500})
+      // $(this).addClass("selected");
+    });
+  $('.squareButton').mouseout(function(event) {
+    event.preventDefault();
+    // $(this).css('background-color', '#0FF');
+    $(this).removeClass("selected");
+  });
+
+});
+</script>
+
+
+
+
+    </section>
+    <div class="clear"></div>
+
+
+  </section><!-- contentSection -->
+
+  <footer id="footerSection"></footer>
+    <section class="postfooter">
+      <div class="postFooterContent">
+        <p><a href="#mainHeader">Return to Top</a></p>
+        <p>Email:  <a href="mailto:no_email@gmail.com" title="Email Paul">pablo.brady@gmail.com</a></p>
+        <p>Copyright &copy; 2015 Paul Brady</p>
+      </div>
+    </section>
+  </section><!-- siteWrapper -->
+
+</body>
+</html>
