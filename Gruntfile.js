@@ -60,9 +60,13 @@ module.exports = function(grunt) {
       //     'dist/contact.html': 'src/contact.html'
       //   }
       // }
-    }
+    },
 
   });
+
+/* 
+http-server public/
+*/
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
