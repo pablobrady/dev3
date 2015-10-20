@@ -224,7 +224,15 @@ footer {
   width: 200px;
   height: 250px;
   margin-top: 10px;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
+  .flex-item p {
+    color: #090;
+    font-size: 1.1em; }
+
+.miscProjects p {
+  color: #0000cc;
+  font-size: 1.1em; }
 
 /* Presentation Elements */
 .presentationItem {

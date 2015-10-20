@@ -13,6 +13,7 @@ $c_grayDark: #666666; // dark-grey
 
 $c_deepRed:   #900;
 $c_deepGreen: #090;
+$c_deepBlue:  #009;
 
 $c_lightGreen: #c3e5c3;
 $c_lightGray:  #dddddd;
@@ -232,7 +233,12 @@ footer {
   height: 250px;
   margin-top: 10px;
   text-align: center;
+  cursor: pointer;
+  p { color: $c_deepGreen; font-size:1.1em; }
 }
+
+.miscProjects p { color: lighten( $c_deepBlue, 10% ); font-size:1.1em; }
+
 
 /* Presentation Elements */
 .presentationItem { 

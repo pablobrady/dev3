@@ -58,4 +58,8 @@
     e.preventDefault();
   });
 
+  $('#oceanSoundId').on('click', function() {
+    window.open("http://www.oceansoundscapes.com", "_ocean");
+  });
+
 });
