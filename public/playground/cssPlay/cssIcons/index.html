@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Practice</title>
+
+<style>
+
+  // UNICODE ICONS
+  a[href^="mailto:"]:before { content: "\2709"; }
+    .email:before { content: "\2709"; }
+  .phone:before             { content: "\2706"; }
+  .important:before         { content: "\27BD"; }
+  blockquote:before         { content: "\275D"; }
+  blockquote:after          { content: "\275E"; }
+  .alert:before             { content: "\26A0"; }
+
+  :before, :after { 
+    color: purple; 
+  }
+
+  p, blockquote {
+    margin: 20px;
+  }
+  body, a {
+    color: #333;
+    text-decoration: none;
+    font-size: 21px;
+  }
+
+</style>
+
+</head>
+<body>
+
+  <p>
+    <a href="mailto:pablo.brady@gmail.com">
+      pablo.brady@gmail.com
+    </a><br>
+
+    <a class="email" href="mailto:pablo.brady@gmail.com">
+      pablo.brady@gmail.com
+    </a>
+  </p>
+
+  <p class="phone">
+      555-555-5555
+  </p>
+
+  <p class="important">
+    IMPORTANT:  Breathe!
+  </p>
+
+  <blockquote>
+     Designers tend to whisper, ad agencies tend to shout.
+  </blockquote>
+
+  <p class="alert">
+     Alert!
+  <p>
+
+
+</body>
+</html>
