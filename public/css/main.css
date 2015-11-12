@@ -79,6 +79,11 @@ a:link, a:hover, a:visited {
   a:link:hover, a:hover:hover, a:visited:hover {
     text-decoration: underline; }
 
+ul.instructions {
+  list-style-type: none; }
+  ul.instructions li {
+    color: #17908B; }
+
 .italicText {
   font-size: 1.0em;
   font-weight: normal;
@@ -230,10 +235,6 @@ footer {
     color: #090;
     font-size: 1.1em; }
 
-.miscProjects p {
-  color: #0000cc;
-  font-size: 1.1em; }
-
 /* Presentation Elements */
 .presentationItem {
   margin-top: 20px;
@@ -261,7 +262,8 @@ footer {
   font-size: 0.7em; }
 
 .desc ul li {
-  margin-left: 22px; }
+  margin-left: 22px;
+  font-size: 0.9em; }
 
 /* Application Content */
 .img-responsive {

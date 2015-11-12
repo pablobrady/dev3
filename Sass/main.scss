@@ -101,6 +101,13 @@ a:link, a:hover, a:visited {
   }
 }
 
+ul.instructions {
+  list-style-type: none;
+  li {
+    color: $c4;
+  }
+}
+
 .italicText {
   font-size: 1.0em;
   font-weight: normal;
@@ -237,8 +244,6 @@ footer {
   p { color: $c_deepGreen; font-size:1.1em; }
 }
 
-.miscProjects p { color: lighten( $c_deepBlue, 10% ); font-size:1.1em; }
-
 
 /* Presentation Elements */
 .presentationItem { 
@@ -274,7 +279,9 @@ footer {
 
 .desc ul li {
   margin-left: 22px;
+  font-size: 0.9em;
 }
+
 
 /* Application Content */
 .img-responsive {
