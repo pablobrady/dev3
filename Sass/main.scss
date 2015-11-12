@@ -103,6 +103,7 @@ a:link, a:hover, a:visited {
 
 ul.instructions {
   list-style-type: none;
+  font-size: 0.7em;
   li {
     color: $c4;
   }
@@ -154,6 +155,7 @@ h6, .footerCol1 p, .footerCol2 p {
   color: $c_grayMed;
   font-family: 'Federo', serif;
   text-decoration: none;
+  padding-bottom: 15px;
 } /* smallest */
 
 .emailText {
@@ -282,6 +284,19 @@ footer {
   font-size: 0.9em;
 }
 
+
+.portfolioLink {
+  line-height: 45px;
+  display: flex;
+
+  a:link, a:hover, a:visited {
+    border: solid 1px $c4;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 auto;
+    align-self: center;
+  }
+}
 
 /* Application Content */
 .img-responsive {

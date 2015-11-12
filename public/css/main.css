@@ -80,7 +80,8 @@ a:link, a:hover, a:visited {
     text-decoration: underline; }
 
 ul.instructions {
-  list-style-type: none; }
+  list-style-type: none;
+  font-size: 0.7em; }
   ul.instructions li {
     color: #17908B; }
 
@@ -128,7 +129,8 @@ h6, .footerCol1 p, .footerCol2 p {
   font-size: 0.9em;
   color: #7f7f7f;
   font-family: 'Federo', serif;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-bottom: 15px; }
 
 /* smallest */
 .emailText {
@@ -264,6 +266,16 @@ footer {
 .desc ul li {
   margin-left: 22px;
   font-size: 0.9em; }
+
+.portfolioLink {
+  line-height: 45px;
+  display: flex; }
+  .portfolioLink a:link, .portfolioLink a:hover, .portfolioLink a:visited {
+    border: solid 1px #17908B;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 auto;
+    align-self: center; }
 
 /* Application Content */
 .img-responsive {
