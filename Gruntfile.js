@@ -54,13 +54,30 @@ module.exports = function(grunt) {
           // 'destination2': 'source2'
         }
       },
-      // dev: {                                       // Another target
-      //   files: {
-      //     'dist/index.html': 'src/index.html',
-      //     'dist/contact.html': 'src/contact.html'
-      //   }
-      // }
     },
+
+    // configure nodemon
+    nodemon: {
+      dev: {
+        script: 'server.js'
+      }
+    },
+
+
+    // run watch and nodemon at the same time
+    concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
+      tasks: ['nodemon', 'watch']
+    },
+
+    // dev: {                                       // Another target
+    //   files: {
+    //     'dist/index.html': 'src/index.html',
+    //     'dist/contact.html': 'src/contact.html'
+    //   }
+    // }
 
   });
 
@@ -74,7 +91,10 @@ http-server public/
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-nodemon');
+  grunt.loadNpmTasks('grunt-concurrent');
 
+  grunt.registerTask('start',['nodemon']);
   grunt.registerTask('default',['jshint','uglify','concat','htmlmin','sass']);
-  grunt.registerTask('dev',['jshint','uglify','concat','htmlmin','watch']);
+  grunt.registerTask('dev',['jshint','uglify','concat','htmlmin','concurrent']);
 };
