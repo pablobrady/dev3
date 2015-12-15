@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Practice</title>
+
+<style>
+.class1 { color: red; }
+
+.class1:not( #myId ) {
+  color: blue;
+}
+
+INPUT[type="text"] {
+  color: green;
+}
+
+INPUT[type="text"]:focus {
+  color: black;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="class1">This is Div A</div>
+
+<div id="myId" class="class1">This is Div B</div>
+
+<hr>
+
+Select an attribute:<br>
+<input type="text" 
+  onfocus="if(this.value == 'Enter your name.') { this.value = ''; }" 
+  onblur="if(this.value == '') { this.value = 'Enter your name!'; }" 
+  value="Enter your name.">
+<hr>
+
+</body>
+</html>
