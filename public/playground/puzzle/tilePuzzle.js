@@ -1,10 +1,13 @@
-// 'use strict';
+"use strict";
 
-var TilePuzzle = function() {
-  // 'use strict';
+var TilePuzzle = function(imageName, difficulty) {
   console.log("TilePuzzle arrival!");
-  this.PUZZLE_DIFFICULTY = 3; // (ex. 4) Number across
-  this.PUZZLE_HOVER_TINT = '#009900';
+
+  this.imageName = imageName || '';
+  console.log("this.imageName = '" + this.imageName);
+
+  this.PUZZLE_DIFFICULTY = difficulty || 4; // (ex. 4) Number across
+  this.PUZZLE_HOVER_TINT = '#990000';
 
   this.canvas = null;
   this.stage = null;
@@ -31,7 +34,9 @@ TilePuzzle.prototype.init = function() {
       console.log("IMAGE LOADED! ");
       that.onImageLoad();
     }, false);
-  this.img.src = 'FERobot.jpg';
+
+  if( this.imageName==='' ) { console.log('TilePuzzle ERROR - No image specified.'); }
+  this.img.src = this.imageName;
 
   console.log("TilePuzzle.prototype.init exit");
 };
