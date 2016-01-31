@@ -28,8 +28,8 @@ TilePuzzle.prototype.init = function() {
 
   this.img = new Image();
   this.img.addEventListener("load", function() {
-      console.log("IMAGE LOADED!");
-      tilePuzzle.onImageLoad.bind(that)();
+      console.log("IMAGE LOADED! ");
+      that.onImageLoad();
     }, false);
   this.img.src = 'FERobot.jpg';
 
@@ -47,7 +47,7 @@ TilePuzzle.prototype.onImageLoad = function() {
 };
 
 TilePuzzle.prototype.setCanvas = function() {
-  console.log("TilePuzzle.prototype. arrival");
+  console.log("TilePuzzle.prototype.setCanvas arrival");
   this.canvas = document.getElementById('canvas');
   this.stage = this.canvas.getContext('2d');
   this.canvas.width = this.puzzleWidth;
@@ -56,7 +56,7 @@ TilePuzzle.prototype.setCanvas = function() {
 };
 
 TilePuzzle.prototype.initPuzzle = function() {
-  console.log("TilePuzzle.prototype. arrival");
+  console.log("TilePuzzle.prototype.initPuzzle arrival");
   this.pieces = [];
   this.mouse = {x:0,y:0};
   this.currentPiece = null;
@@ -96,12 +96,14 @@ TilePuzzle.prototype.buildPieces = function() {
         yPos += this.pieceHeight;
     }
   }
-  document.onmousedown = shufflePuzzle; // Starts the game
+
+  var that = this;
+  document.onmousedown = this.shufflePuzzle.bind(that); // Starts the game
 };
 
 TilePuzzle.prototype.shufflePuzzle = function() {
   console.log("TilePuzzle.prototype.shufflePuzzle arrival");
-  this.pieces = shuffleArray(this.pieces);
+  this.pieces = this.shuffleArray(this.pieces);
   this.stage.clearRect(0,0,this.puzzleWidth,this.puzzleHeight);
   var i;
   var piece;
@@ -121,7 +123,9 @@ TilePuzzle.prototype.shufflePuzzle = function() {
       yPos += this.pieceHeight;
     }
   }
-  document.onmousedown = onPuzzleClick; // Listen for click on the puzzle, somewhere.
+
+  var that = this;
+  document.onmousedown = this.onPuzzleClick.bind(that); // Listen for click on the puzzle, somewhere.
 };
 
 // Nice, (but hard to read) shuffle function
@@ -143,7 +147,7 @@ TilePuzzle.prototype.onPuzzleClick = function(e) {
     this.mouse.x = e.offsetX - this.canvas.offsetLeft;
     this.mouse.y = e.offsetY - this.canvas.offsetTop;
   }
-  this.currentPiece = checkPieceClicked();
+  this.currentPiece = this.checkPieceClicked();
   if(this.currentPiece != null){
     this.stage.clearRect(this.currentPiece.xPos,this.currentPiece.yPos,this.pieceWidth,this.pieceHeight);
     this.stage.save();
@@ -151,8 +155,10 @@ TilePuzzle.prototype.onPuzzleClick = function(e) {
     this.stage.drawImage(this.img, this.currentPiece.sx, this.currentPiece.sy, this.pieceWidth, this.pieceHeight, this.mouse.x - (this.pieceWidth / 2), this.mouse.y - (this.pieceHeight / 2), this.pieceWidth, this.pieceHeight);
     this.stage.drawImage(this.img, this.currentPiece.sx, this.currentPiece.sy, this.pieceWidth, this.pieceHeight, this.mouse.x - (this.pieceWidth / 2), this.mouse.y - (this.pieceHeight / 2), this.pieceWidth, this.pieceHeight);
     this.stage.restore();
-    document.onmousemove = this.updatePuzzle;
-    document.onmouseup = this.pieceDropped;
+
+    var that = this;
+    document.onmousemove = this.updatePuzzle.bind(that);
+    document.onmouseup = this.pieceDropped.bind(that);
   }
 };
 
@@ -243,8 +249,10 @@ TilePuzzle.prototype.resetPuzzleAndCheckWin = function() {
         gameWin = false;
     }
   }
+
+  var that = this;
   if(gameWin){
-    setTimeout(this.gameOver,500);
+    setTimeout(this.gameOver.bind(that),500);
   }
 };
 
