@@ -6,7 +6,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>mmm... Ajax!</title>
-<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 <style type="text/css">
 @import url(css.css);
 </style>
@@ -15,6 +15,7 @@
 $(document).ready(function() {
                
   var hash = window.location.hash.substr(1);
+  console.log("HASH = " + hash);
   var href = $('#nav li a').each(function(){
     var href = $(this).attr('href');
     if(hash==href.substr(0,href.length-5)){
