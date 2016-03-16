@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- http://d2o0t5hpnwv4c1.cloudfront.net/011_jQuerySite/sample/index.html#index -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>mmm... Ajax!</title>
+<script type="text/javascript" src="jquery.js"></script>
+<style type="text/css">
+@import url(css.css);
+</style>
+
+<script>
+$(document).ready(function() {
+               
+  var hash = window.location.hash.substr(1);
+  var href = $('#nav li a').each(function(){
+    var href = $(this).attr('href');
+    if(hash==href.substr(0,href.length-5)){
+      var toLoad = hash+'.html #content';
+      $('#content').load(toLoad)
+    }                     
+  });
+
+  $('#nav li a').click(function(){
+                  
+    var toLoad = $(this).attr('href')+' #content';
+    $('#content').hide('fast',loadContent);
+    $('#load').remove();
+    $('#wrapper').append('<span id="load">LOADING...</span>');
+    $('#load').fadeIn('normal');
+    window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+    function loadContent() {
+      $('#content').load(toLoad,'',showNewContent())
+    }
+    function showNewContent() {
+      $('#content').show('normal',hideLoader());
+    }
+    function hideLoader() {
+      $('#load').fadeOut('normal');
+    }
+    return false;
+    
+  });
+
+});
+</script>
+
+</head>
+<body>
+    <div id="wrapper">
+    <h1>ajax ... nettuts</h1>
+    <ul id="nav">
+        <li><a href="index.html">welcome</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="terms.html">terms</a></li>
+    </ul>
+    <div id="content">      
+        <h2>Welcome!</h2>
+        <p>Hi, welcome to the demonstration for the NETTUTS tutorial - "How to Load In and Animate Content with jQuery"</p>
+        <p>In this tutorial we will be taking your average everyday website and enhancing it with jQuery. We will be adding ajax functionality so that the content loads into the relevant container instead of the user having to navigate to another page. We will also be integrating some awesome effects...</p>
+    </div>
+    <div id="foot">Tutorial by James for NETTUTS</div>
+</div>
+
+</body>
+</html>
