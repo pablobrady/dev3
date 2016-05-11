@@ -31,6 +31,10 @@ module.exports = function(grunt) {
         files: '**/*.scss',
         tasks: ['sass']
       }
+      // html: {
+      //   files: 'src/*.html',
+      //   tasks: ['sass']
+      // }
     },
 
     concat: {
@@ -69,7 +73,7 @@ module.exports = function(grunt) {
       options: {
         logConcurrentOutput: true
       },
-      tasks: ['nodemon', 'watch']
+      tasks: ['nodemon', 'watch:css']
     },
 
     // dev: {                                       // Another target
@@ -95,6 +99,6 @@ http-server public/
   grunt.loadNpmTasks('grunt-concurrent');
 
   grunt.registerTask('start',['nodemon']);
-  grunt.registerTask('default',['jshint','uglify','concat','htmlmin','sass']);
-  grunt.registerTask('dev',['jshint','uglify','concat','htmlmin','concurrent']);
+  // grunt.registerTask('default',['jshint','uglify','concat','htmlmin','sass']);
+  grunt.registerTask('default',['jshint','uglify','concat','htmlmin','concurrent']);
 };

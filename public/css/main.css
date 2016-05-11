@@ -100,7 +100,7 @@ h1 {
 
 /* 48px/30px; target / context = result */
 h2 {
-  font-size: 1.3em;
+  font-size: 1.6em;
   color: #090;
   font-family: 'Federo', serif; }
 
@@ -154,11 +154,9 @@ h6, .footerCol1 p, .footerCol2 p {
   width: 100%; }
 
 .mainHeader {
-  padding: 0;
+  padding: 0 0 0 15px;
   width: 100%;
   height: 100px; }
-  .mainHeader hgroup {
-    padding: 0; }
 
 .tagline {
   font-size: 0.81em;
@@ -239,9 +237,14 @@ footer {
 
 /* Presentation Elements */
 .presentationItem {
-  margin-top: 20px;
+  margin: 20px 10px 0 10px;
   width: 95%;
-  padding: 15px; }
+  padding: 25px 15px 25px 15px; }
+  .presentationItem .desc {
+    padding: 0 0 10px 0; }
+  .presentationItem.dark:nth-child(odd) {
+    background-color: #fff6e5;
+    border-radius: 25px; }
 
 .leftPres {
   float: left;
@@ -272,6 +275,7 @@ footer {
   .portfolioLink a:link, .portfolioLink a:hover, .portfolioLink a:visited {
     border: solid 1px #17908B;
     border-radius: 10px;
+    background-color: #ffffff;
     text-align: center;
     flex: 1 1 auto;
     align-self: center; }
