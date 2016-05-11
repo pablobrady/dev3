@@ -126,7 +126,7 @@ h5 {
 
 /* smallest */
 h6, .footerCol1 p, .footerCol2 p {
-  font-size: 0.9em;
+  font-size: 1.0em;
   color: #7f7f7f;
   font-family: 'Federo', serif;
   text-decoration: none;
@@ -263,7 +263,7 @@ footer {
   width: 50%; }
 
 .projSuffixText {
-  font-size: 0.7em; }
+  font-size: 0.9em; }
 
 .desc ul li {
   margin-left: 22px;
