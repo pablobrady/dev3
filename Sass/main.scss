@@ -14,7 +14,7 @@ $c_darkSand: #d4b06a;// dark sand
 $c_grayDark: #666666; // dark-grey
 
 $c_deepRed:   #900;
-$c_deepGreen: #090;
+$c_mediumRed: #cc3929;
 $c_deepBlue:  #009;
 
 $c_lightGreen: #c3e5c3;
@@ -28,7 +28,7 @@ $c_tabBgSelected:  #f2a101;
 .c_wht { color: $c_wht; }
 .c_blk { color: $c_blk; }
 .c_grayMed { color: $c_grayMed; }
-.c_grayDark { color: $c_grayDark;} 
+.c_grayDark { color: $c_grayDark;}
 .c1 { color:$c1; }
 .c2 { color:$c2; }
 .c3 { color:$c3; }
@@ -51,9 +51,16 @@ strong, b {
     margin: 0;
 }
 
+/* box-sizing */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 /* Clear-less */
-.group:before, 
+.group:before,
 .group:after {
   content: "";
   display: table;
@@ -86,9 +93,9 @@ body {
   width: 990px;
   margin: 0 auto;
   text-align: left;
-  position: relative; 
+  position: relative;
   padding-top: 50px;
-  background-color: $c_wht; 
+  background-color: $c_wht;
   background-image: url("../images/headerDev3.png");
   background-position: center top, 80% bottom;
   background-repeat: no-repeat;
@@ -127,10 +134,17 @@ h1 {
 } /* 48px/30px; target / context = result */
 
 h2 {
-  font-size: 1.6em;
-  color: $c_deepGreen;
+  font-size: 1.9em;
+  color: $c_deepRed;
   font-family: 'Federo', serif;
 } /* 10px/10px; target / context = result */
+
+.leftPres h2,
+.rightPres h2 {
+  font-size: 1.6em;
+  color: black;
+}
+
 
 h3 {
   font-size: 0.9em;
@@ -174,17 +188,17 @@ h6, .footerCol1 p, .footerCol2 p {
 }
 
 .figure-caption {
-  font-size: 0.7em; 
-  font-weight: bold; 
+  font-size: 0.7em;
+  font-weight: bold;
   color: $c_grayMed;
   text-align: center;
 }
 
 .siteWrapper {
-  width: 100%; 
+  width: 100%;
 }
 
-.mainHeader { 
+.mainHeader {
   padding: 0 0 0 15px;
   width: 100%;
   height: 100px;
@@ -216,14 +230,13 @@ footer {
 }
 
 /* Presentation Elements */
-.profPresentationItem { 
-  margin: 15px 0 0 15px;
-  width: -15px;
+.profPresentationItem {
+  margin: 15px 0 0 0;
   overflow:auto;
 
-  p { color: $c_deepGreen; font-family: 'Federo', serif; font-size: 1.2em; padding:0; }
+  p { color: $c_mediumRed; font-family: 'Federo', serif; font-size: 1.2em; padding:0; }
   div { color: $c_blk; font-family: 'Arial', serif; font-size: 0.7em;}
-  img { width: 200px; border: solid 2px #000; margin:0 5px 0 0;}
+  img { width: 100%; border: solid 2px #000; margin:0 5px 0 0;}
 
 }
 
@@ -244,12 +257,12 @@ footer {
   margin-top: 10px;
   text-align: center;
   cursor: pointer;
-  p { color: $c_deepGreen; font-size:1.1em; }
+  p { color: $c_mediumRed; font-size:1.1em; }
 }
 
 
 /* Presentation Elements */
-.presentationItem { 
+.presentationItem {
   margin: 20px 10px 0 10px;
   width: 95%;
   padding: 25px 15px 25px 15px;
@@ -258,31 +271,31 @@ footer {
     padding:0 0 10px 0;
   }
 
-  &.dark { 
-    background-color:#fff6e5; 
-    border-radius: 25px; 
+  &.dark {
+    background-color:#fff6e5;
+    border-radius: 25px;
   }
 
 }
 
 
 .leftPres {
-  float: left; 
-  width: 40%; 
+  float: left;
+  width: 40%;
 }
 
 .rightImg {
-  float: right; 
+  float: right;
   width: 50%;
 }
 
 .rightPres {
-  float: right; 
+  float: right;
   width: 40%;
 }
 
 .leftImg {
-  float: left; 
+  float: left;
   width: 50%;
 }
 
@@ -391,7 +404,7 @@ li.active a, li.active a:hover {
 
 
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 900px) {
   body {
     padding-top: 80px;
     width: 100%;
@@ -399,7 +412,7 @@ li.active a, li.active a:hover {
 
   .leftPres, .rightPres {
     padding: 10px 0 0 0;
-    width: 100%; 
+    width: 100%;
   }
   .rightImg, .leftImg {
     padding: 20px 0 20px 0;
@@ -423,17 +436,17 @@ li.active a, li.active a:hover {
 }
 
 
-@media screen and (max-width: 320px) { 
+@media screen and (max-width: 320px) {
   body {
     padding-top: 30px;
     width: 320px;
   }
   .leftPres, .rightPres {
     padding: 10px 10px 0 0;
-    width: 90%; 
+    width: 90%;
   }
   .rightImg, .leftImg {
-    padding: 20px 10px 20px 0; 
+    padding: 20px 10px 20px 0;
     width: 90%;
   }
   .tabs {
